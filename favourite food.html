@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hakim's Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="image/guts.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+ <main class="about-container" id="about">
+  <h1>Fav Food</h1>
+    <p> My favourite food is chicken tenders. They are crispy on the outside, juicy on the inside, and always full of flavor. I love the golden-brown crunch when I take a bite, especially when they're freshly fried. Whether dipped in spicy sauce, honey mustard, or eaten plain, chicken tenders always make a perfect meal or snack. They're simple, delicious, and remind me of comfort and happiness every time I eat them. </p>
+</main>
+
+  <!-- Particle layer -->
+  <div id="tsparticles"></div>
+
+   <main class="about-container" id="about">
+    <h1>Fav Food</h1>
+  <div class="image-toggle-container">
+    <img src="image/ct.jpeg" class="toggle-image active" alt="Image 1">
+    <img src="image/ct1.jpeg" class="toggle-image" alt="Image 2">
+  </div>
+
+  <div class="toggle-buttons">
+    <button onclick="showImage(0)">1</button>
+    <button onclick="showImage(1)">2</button>
+  </div>
+</main>
+
+<main class="about-container" id="memory-video">
+  <h1>Video</h1>
+  <div class="video-gallery">
+    <div class="video-item">
+      <video controls>
+        <source src="image/ct2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="image/ct3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script src="js/waves-config.js"></script>
+  <script src="js/bgm.js"></script>
+  <script>
+    function showImage(index) {
+      const images = document.querySelectorAll('.toggle-image');
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hakim's Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="image/guts.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Particle layer -->
+  <div id="tsparticles"></div>
+
+<!-- College Friends -->
+<main class="about-container" id="college">
+  <h1>My College Friends</h1>
+  <p1>My college friends have been an important part of my life journey. We met during one of the most exciting and challenging phases of our lives. From the first day of orientation to late-night study sessions and spontaneous hangouts, we have shared countless memories together. Each of them has a unique personality some are quiet and thoughtful, while others are outgoing and full of energy. But despite our differences, we always support one another.
+
+  We laugh at silly jokes, help each other during tough assignments, and celebrate every small victory as a team. They are more than just friends—they are like a second family to me. The bond we’ve built during our time in college will always be special, and I know that no matter where life takes us, the memories we’ve made together will stay with me forever.</p1>
+  <div class="image-toggle-container">
+    <img src="image/colleges.jpeg" class="toggle-image college active" alt="Image 1">
+    <img src="image/classmate.jpeg" class="toggle-image college" alt="Image 2">
+    <img src="image/normi's.jpeg" class="toggle-image college" alt="Image 3">
+    <img src="image/normi's1.jpeg" class="toggle-image college" alt="Image 4">
+    <img src="image/bilik5.jpeg" class="toggle-image college" alt="Image 5">
+    <img src="image/ustaz.jpeg" class="toggle-image college" alt="Image 6">
+  </div>
+  <div class="toggle-buttons">
+    <button onclick="showCollegeImage(0)">1</button>
+    <button onclick="showCollegeImage(1)">2</button>
+    <button onclick="showCollegeImage(2)">3</button>
+    <button onclick="showCollegeImage(3)">4</button>
+    <button onclick="showCollegeImage(4)">5</button>
+    <button onclick="showCollegeImage(5)">6</button>
+  </div>
+</main>
+
+<!-- Hometown Friends -->
+<main class="about-container" id="hometown">
+  <h1>My Hometown Friends</h1>
+  <p1>My hometown friends are the people I grew up with, and they hold a special place in my heart. We’ve known each other since childhood, and our bond was built through simple things—playing games after school, riding bicycles around the neighborhood, and spending long evenings just talking about life. With them, I can truly be myself because they’ve seen every side of me, from the silly to the serious.
+
+  Even though we may be on different paths now, whenever we meet, it feels like nothing has changed. There’s a comfort and familiarity in our friendship that can’t be replaced. These friends remind me of where I come from and who I am. No matter how far I go in life, they will always be part of my roots.</p1>
+  <div class="image-toggle-container">
+    <img src="image/friends1.jpeg" class="toggle-image hometown active" alt="Image 1">
+    <img src="image/friends3.jpeg" class="toggle-image hometown" alt="Image 2">
+    <img src="image/friends6.jpeg" class="toggle-image hometown" alt="Image 3">
+    <img src="image/friends4.jpeg" class="toggle-image hometown" alt="Image 4">
+  </div>
+  <div class="toggle-buttons">
+    <button onclick="showHometownImage(0)">1</button>
+    <button onclick="showHometownImage(1)">2</button>
+    <button onclick="showHometownImage(2)">3</button>
+    <button onclick="showHometownImage(3)">4</button>
+  </div>
+</main>
+
+<main>
+
+  <!-- New Main Section with Embedded Video -->
+<main class="about-container" id="memory-video">
+  <h1>Video</h1>
+  <div class="video-gallery">
+    <div class="video-item">
+      <video controls>
+        <source src="image/family.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="image/cocmember.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="image/raya.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="video-item">
+      <video controls>
+        <source src="image/ML.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</main>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script src="js/waves-config.js"></script>
+  <script src="js/bgm.js"></script>
+  <script>
+    function showImage(index) {
+      const images = document.querySelectorAll('.toggle-image');
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+    function showCollegeImage(index) {
+  const collegeImages = document.querySelectorAll('.toggle-image.college');
+  collegeImages.forEach((img, i) => {
+    img.classList.toggle('active', i === index);
+  });
+}
+
+function showHometownImage(index) {
+  const hometownImages = document.querySelectorAll('.toggle-image.hometown');
+  hometownImages.forEach((img, i) => {
+    img.classList.toggle('active', i === index);
+  });
+}
+  </script>
+
+</body>
+</html>

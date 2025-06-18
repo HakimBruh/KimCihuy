@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hakim's Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="image/guts.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+ <main class="about-container" id="about">
+  <h1>About Me</h1>
+    <p> Name: Muhamad Hakim Husaini bin Abd Halim </p>
+    <p> Residence: KG. LUNDANG PAKU, KOTA BHARU, KELANTAN </p>
+    <P> I'm third child of three siblings </P>
+    <p> Age: 21 Years Old </p>
+    <p> Date of Birth: 30/05/2004 </p>
+    <P> Hobby: Badminton and Games </P>
+</main>
+
+  <!-- Particle layer -->
+  <div id="tsparticles"></div>
+
+   <main class="about-container" id="about">
+    <h1>My Images</h1>
+  <div class="image-toggle-container">
+    <img src="image/hakim1.jpeg" class="toggle-image active" alt="Image 1">
+    <img src="image/hakim2.jpeg" class="toggle-image" alt="Image 2">
+    <img src="image/hakim3.jpeg" class="toggle-image" alt="Image 3">
+  </div>
+
+  <div class="toggle-buttons">
+    <button onclick="showImage(0)">1</button>
+    <button onclick="showImage(1)">2</button>
+    <button onclick="showImage(2)">3</button>
+  </div>
+</main>
+
+ <main class="about-container" id="about">
+  <h1>A little bit about me</h1>
+    <p> I am the third child out of five siblings in my family. Growing up in a lively household has taught me the value of cooperation, understanding, and responsibility. Currently, I am pursuing my studies at Universiti Teknologi MARA (UiTM) Machang. I am enrolled in the Diploma in Information Management program, where I am learning valuable skills in organizing, managing, and handling information effectively. This journey not only helps me grow academically but also shapes me into a more disciplined and focused individual as I prepare for my future career. </p>
+</main>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <script src="js/waves-config.js"></script>
+  <script src="js/bgm.js"></script>
+  <script>
+    function showImage(index) {
+      const images = document.querySelectorAll('.toggle-image');
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+
+</body>
+</html>
